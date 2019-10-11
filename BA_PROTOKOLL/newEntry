@@ -1,0 +1,11 @@
+echo "Ereignisbeschreibung: "
+read ereignis
+echo "Datum: "
+read datum
+a="  <tr>\n     <td>$ereignis<\/td>\n     <td>$datum<\/td>\n  <\/tr>"
+sed -i '/<\/tr>[^\n]*/,$!b;//{x;//p;g};//!H;$!d;x;s//&\n'"$a"'/' protokoll.html
+cd ..
+git add .
+git commit -m "Neuer Arbeitsschritt protokolier"
+git push
+echo $a
