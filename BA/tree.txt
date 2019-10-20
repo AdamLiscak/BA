@@ -1,0 +1,15 @@
+- Einleitung
+- Related Work
+- Neuronale Netze grundsätzlich erklären
+- Objekterkennung mit Neuronalen Netzen
+- Neuronale Netze auf Embedded Devices
+- Ein neuronales Netzwerk auf Qualitätsmerkmale untersuchen
+- Dieses neuronale Netzwerk auf einem embedded-device aufbauen und trainieren,
+- um Gestalten zu erkennen
+- Die Implementation statistisch bewerten - die Statistik würde folgendes beinhalten:
+- Detektionszeit
+- Wahr/Falsch Quote für die Objekterkennung
+- State of the Art von eingebetteten neuronalen Netzwerken untersuchen und die
+astatistisch gewonnenen Ergebnisse interpretieren
+- Résumé mit Implikationen, die von meiner Arbeit gewonnen wurden und
+Möglichkeiten zur Weiterentwicklung der Arbeit
