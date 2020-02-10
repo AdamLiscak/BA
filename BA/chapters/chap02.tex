@@ -2,21 +2,24 @@
 \chapter{Principles of Artificial Neural Networks}
 \section{Popular Mathematical Representational Models for ANNs}
 \subsection{Architecture of Anns}
-The term "artificial neural networks" denominates a set of heuristic and metaheuristic algorithms using directed graph data structures to provide solutions for problems which can be resolved through learning processes. Since neural networks are based on directed graphs, they posess nodes and edges which, analogously to the anatomy of a biological brain, are referred to as neurons and synapses. The architecture of a neural network will vary depending on its designation.aa
+The term "artificial neural networks" denominates a set of heuristic and metaheuristic algorithms using directed graph data structures to provide solutions for problems which can be resolved through learning processes. Since neural networks are based on directed graphs, they posess nodes and edges which, analogously to the anatomy of a biological brain, are referred to as neurons and synapses. The architecture of a neural network will vary depending on its designation.
+
+\end{description}
 \subsubsection{Synapses and Neurons}
- %Most neural networks can be subdivided into 3 different archetypes:
- %\begin{description}a
- %\item[$\bullet$] \textbf{Feed-Forward Neural Networks}
-%\item[$\bullet$] \textbf{Complete Graphs}\\
-%  Each node of a given graph is connected to every node which is a member of this graph.
-%In recurrent neural networks information can flow in cycles.
-%\end{description}
 \subsubsection{Feed-Forward neural networks}
   Feed-Forward neural networks can process information only in one direction: \\
   \begin{description}
      Given node a and node b which is the predecessor of a, node a can have exactly one outgoing edge which can not point to b or its predecessors.
   \end{description}
    These Neural networks are primarily utilized to realize supervised-learning-algorithms with non-time-dependent and non-sequential inputs
+   \subsubsection{Other Types of Neural Networks}
+   Most neural networks can be subdivided into 3 different archetypes:
+   \begin{description}
+   \item[$\bullet$] \textbf{recurrentNeural Networks}
+  \item[$\bullet$] \textbf{Complete Graphs}\\
+  Each node of a given graph is connected to every node which is a member of this raph.
+  In recurrent neural networks information can flow in cycles.
+  \end{description}
 \subsection{Data Processing Strategies in ANNs}
 \subsubsection{Activation Functions}
 Each neuron in a neural network requires an Activation function which maps the weighted product of the preceding neurons to a number between 0 and 1 in order for the neural network to be able to visualize regressions. This can be achieved through various approaches:
@@ -31,12 +34,24 @@ The derivative of these functions is not a constant.
 %In recurrent neural networks information can flow in cycles.
 \end{description}
 \subsection{Learning Processes in Neural Networks}
-Untrained neural networks will not perform accurately and they require pre-classified sample subjects to be able discern between new input values. With these pre-classified values one can change the configuration of a neural network to enhance its classification capabilities by feeding the neural network with an error function which calculates how accurately the data set has been classified. Knowing the error, one can continue adjusting the weights and biases of the synapses and neurons in the network so that the error function outputs a lower value.
-The problem of lowering the error rate of a function based on predefined criteria is analogous to finding localminima in a multi-dimensional function.
-\subsubsection{Error Functions}
-In supervised-learning neural networks are fed with a solution that is compared to their own output. This solution can be represented as a float vector wherein every number of this vector is a 0 or a 1 ( assuming the output range of the output x for an activation function is x$\epsilon$[0;1] ) depending whether the member of the vector corresponds to a tag which is true for the object fed into the neural network.
+Untrained supervised neural networks will not perform accurately and they require pre-classified sample subjects to be able discern between new input values. With these pre-classified values one can change the configuration of a neural network to enhance its classification capabilities by feeding the neural network with an error function which calculates how accurately the data set has been classified. Knowing the error, one can continue adjusting the weights and biases of the synapses and neurons in the network so that the error function outputs a lower value.
+The problem of lowering the error rate of a function based on predefined criteria is analogous to finding local minima in a multi-dimensional function.
+\subsubsection{Cost Functions}
+In supervised-learning neural networks are fed with a solution that is compared to their own output. This solution can be represented as a vector wherein every member of this vector either represents a 0 or a 1 ( assuming the output range of the output x for an activation function is x $\epsilon$ [0;1] ) depending whether the member of the vector corresponds to a tag which is true for the object fed into the neural network.
+There are different strategies to calculate cost functions:
+\begin{description}
+\subsection{Finding Derivatives of Error}
+\item[$\bullet$] \textbf{Mean Squared Error}
+\item[$\bullet$] \textbf{Binary Crossentropy}
+\item[$\bullet$] \textbf{Cathegorical Crossentropy}
+\item[$\bullet$] \textbf{Sparse Cathegorical Crossentropy}
+%\item[$\bullet$] Each neuron not contained in the first layer of the graph is associated with multiple biases towards synapses which feed into itself.
+%\item[$\bullet$] Each synapse has its own weight.
+\end{description}
 \section{Deep Neural Networks}
 Deep Neural Networks are multi-layered feed-forward neural networks, this means that the information fed into the input nodes of a neural network gets processed in one direction.
+\subsection{Backpropagation}7
+
  %These two components satisfy the following conditions:
 %\begin{description}
 %\item[$\bullet$] Neurons can be ordered into layers.
